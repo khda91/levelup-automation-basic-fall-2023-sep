@@ -17,5 +17,8 @@ public class CalculatorApp {
 
         var resAddArray1 = calc.add(BigDecimal.valueOf(1), BigDecimal.valueOf(6), BigDecimal.valueOf(3));
         System.out.println("1 + 6 + 3 = " + resAddArray1);
+
+        var resPower1 = calc.power(BigDecimal.valueOf(2), 10);
+        System.out.println("2 ^ 10 = " + resPower1);
     }
 }
