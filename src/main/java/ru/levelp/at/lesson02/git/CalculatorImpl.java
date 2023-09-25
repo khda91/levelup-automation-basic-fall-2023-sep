@@ -2,6 +2,7 @@ package ru.levelp.at.lesson02.git;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Arrays;
 
 public class CalculatorImpl implements Calculator {
 
@@ -10,6 +11,11 @@ public class CalculatorImpl implements Calculator {
     @Override
     public BigDecimal add(BigDecimal a, BigDecimal b) {
         return a.add(b);
+    }
+
+    @Override
+    public BigDecimal add(BigDecimal... a) {
+        return Arrays.stream(a).reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
     @Override

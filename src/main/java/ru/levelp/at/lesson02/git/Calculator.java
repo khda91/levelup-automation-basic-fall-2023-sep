@@ -6,6 +6,8 @@ public interface Calculator {
 
     BigDecimal add(BigDecimal a, BigDecimal b);
 
+    BigDecimal add(BigDecimal... a);
+
     BigDecimal subtract(BigDecimal a, BigDecimal b);
 
     BigDecimal multiply(BigDecimal a, BigDecimal b);
