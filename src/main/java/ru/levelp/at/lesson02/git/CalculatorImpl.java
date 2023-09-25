@@ -45,4 +45,9 @@ public class CalculatorImpl implements Calculator {
         }
         return a.divide(b, scale, RoundingMode.HALF_UP);
     }
+
+    @Override
+    public BigDecimal abs(BigDecimal a) {
+        return a.abs();
+    }
 }

@@ -17,4 +17,6 @@ public interface Calculator {
     BigDecimal divide(BigDecimal a, BigDecimal b);
 
     BigDecimal divide(BigDecimal a, BigDecimal b, int scale);
+
+    BigDecimal abs(BigDecimal a);
 }
