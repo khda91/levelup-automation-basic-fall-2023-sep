@@ -23,5 +23,8 @@ public class CalculatorApp {
 
         var resPower1 = calc.power(BigDecimal.valueOf(2), 10);
         System.out.println("2 ^ 10 = " + resPower1);
+
+        var resPower2 = calc.power(BigDecimal.valueOf(2), 20);
+        System.out.println("2 ^ 20 = " + resPower2);
     }
 }
