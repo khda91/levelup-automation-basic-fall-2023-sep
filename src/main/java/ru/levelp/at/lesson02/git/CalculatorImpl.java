@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class CalculatorImpl implements Calculator {
+
+    private static final int DEFAULT_SCALE = 2;
+
     @Override
     public BigDecimal add(BigDecimal a, BigDecimal b) {
         return a.add(b);
@@ -21,9 +24,14 @@ public class CalculatorImpl implements Calculator {
 
     @Override
     public BigDecimal divide(BigDecimal a, BigDecimal b) {
+        return this.divide(a, b, DEFAULT_SCALE);
+    }
+
+    @Override
+    public BigDecimal divide(BigDecimal a, BigDecimal b, int scale) {
         if (b == null || b.equals(BigDecimal.ZERO)) {
             throw new IllegalArgumentException("b cannot be null or ZERO");
         }
-        return a.divide(b, RoundingMode.HALF_UP);
+        return a.divide(b, scale, RoundingMode.HALF_UP);
     }
 }
