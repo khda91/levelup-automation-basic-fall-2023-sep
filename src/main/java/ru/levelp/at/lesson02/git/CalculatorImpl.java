@@ -3,6 +3,7 @@ package ru.levelp.at.lesson02.git;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class CalculatorImpl implements Calculator {
 
@@ -49,5 +50,24 @@ public class CalculatorImpl implements Calculator {
     @Override
     public BigDecimal abs(BigDecimal a) {
         return a.abs();
+    }
+
+    @Override
+    public BigDecimal power(BigDecimal a, int power) {
+        if (power < 0) {
+            throw new IllegalArgumentException("power cannot be negative");
+        }
+
+        if (power == 0) {
+            return BigDecimal.ONE;
+        }
+
+        BigDecimal result = BigDecimal.ONE;
+
+        for (int i = 0; i < power; i++) {
+            result = result.multiply(a);
+        }
+
+        return result;
     }
 }
