@@ -16,6 +16,13 @@ public interface Calculator {
 
     BigDecimal divide(BigDecimal a, BigDecimal b);
 
+    /**
+     * Divide a to b with scale.
+     * @param a - number 1
+     * @param b - number 2
+     * @param scale - amount signs after delimiter
+     * @return a / b with scale
+     */
     BigDecimal divide(BigDecimal a, BigDecimal b, int scale);
 
     BigDecimal abs(BigDecimal a);
