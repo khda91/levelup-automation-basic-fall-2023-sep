@@ -20,5 +20,11 @@ public interface Calculator {
 
     BigDecimal abs(BigDecimal a);
 
+    /**
+     * Calculate value of number in power.
+     * @param a - value
+     * @param power - power
+     * @return value in power
+     */
     BigDecimal power(BigDecimal a, int power);
 }
