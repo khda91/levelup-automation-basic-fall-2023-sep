@@ -11,11 +11,5 @@ public class CalculatorApp {
 
         var resDivide2 = calc.divide(BigDecimal.valueOf(1), BigDecimal.valueOf(6), 5);
         System.out.println("1 / 6 = " + resDivide2);
-
-        var resAdd1 = calc.add(BigDecimal.valueOf(1), BigDecimal.valueOf(2));
-        System.out.println("1 + 2  = " + resAdd1);
-
-        var resSubtract1 = calc.subtract(BigDecimal.valueOf(1), BigDecimal.valueOf(2));
-        System.out.println("1 - 2  = " + resSubtract1);
     }
 }
