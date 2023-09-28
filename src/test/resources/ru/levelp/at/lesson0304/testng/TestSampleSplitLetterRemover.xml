@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- @BeforeSuite -->
+<suite name="Before After Test annotaion example 2">
+
+    <!-- @BeforeTest -->
+    <test name="Sample tests pack 1">
+        <classes>
+            <!-- @BeforeClass -->
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterMethodLetterRemoverSampleTests">
+                <!-- @BeforeMethod -->
+                <!-- @Test -->
+                <!-- AfterMethod -->
+                <!-- ... -->
+            </class>
+            <!-- @AfterClass -->
+
+            <!-- @BeforeClass -->
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterClassLetterRemoverSampleTests">
+                <!-- @BeforeMethod -->
+                <!-- @Test -->
+                <!-- AfterMethod -->
+                <!-- ... -->
+            </class>
+            <!-- @AfterClass -->
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+    <!-- @BeforeTest -->
+    <test name="Sample tests pack 2">
+        <classes>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterSuiteLetterRemoverSampleTests"/>
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+    <!-- @BeforeTest -->
+    <test name="Sample tests pack 3">
+        <classes>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterTestLetterRemoverSampleTests"/>
+        </classes>
+    </test>
+    <!-- @BeforeTest -->
+</suite>
+<!-- @AfterTest -->

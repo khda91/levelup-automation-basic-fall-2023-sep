@@ -20,7 +20,7 @@ public class LetterRemover {
                 .collect(Collectors.toList());
     }
 
-    public List<String> removeVanila(List<String> list, String letter) {
+    public List<String> removeVanilla(List<String> list, String letter) {
         if (list == null || list.isEmpty()) {
             throw new IllegalArgumentException("List cannot be null or empty");
         }
