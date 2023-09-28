@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sample Suite">
+
+    <test name="Sample tests pack">
+        <classes>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterMethodLetterRemoverSampleTests"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterClassLetterRemoverSampleTests"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterSuiteLetterRemoverSampleTests"/>
+        </classes>
+    </test>
+</suite>
