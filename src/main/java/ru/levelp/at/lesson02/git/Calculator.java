@@ -18,6 +18,7 @@ public interface Calculator {
 
     /**
      * Divide a to b with scale.
+     *
      * @param a - number 1
      * @param b - number 2
      * @param scale - amount signs after delimiter
@@ -29,6 +30,7 @@ public interface Calculator {
 
     /**
      * Calculate value of number in power.
+     *
      * @param a - value
      * @param power - power
      * @return value in power
