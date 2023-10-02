@@ -24,7 +24,32 @@
         <!-- plugins -->
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>suite-sample-letter-remover</id>
+            <properties>
+                <suite.xml.file>${project.basedir}/src/test/resources/ru/levelp/at/lesson0304/testng/SuiteSampleLetterRemover.xml</suite.xml.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>test-sample-letter-remover</id>
+            <properties>
+                <suite.xml.file>${project.basedir}/src/test/resources/ru/levelp/at/lesson0304/testng/TestSampleLetterRemover.xml</suite.xml.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>test-sample-split-letter-remover</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml.file>${project.basedir}/src/test/resources/ru/levelp/at/lesson0304/testng/TestSampleSplitLetterRemover.xml</suite.xml.file>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -139,6 +164,17 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suite.xml.file}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>

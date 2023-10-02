@@ -6,7 +6,7 @@
     <test name="Sample tests pack 1">
         <classes>
             <!-- @BeforeClass -->
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterMethodLetterRemoverSampleTests">
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterMethodLetterRemoverSampleTest">
                 <!-- @BeforeMethod -->
                 <!-- @Test -->
                 <!-- AfterMethod -->
@@ -15,7 +15,7 @@
             <!-- @AfterClass -->
 
             <!-- @BeforeClass -->
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterClassLetterRemoverSampleTests">
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterClassLetterRemoverSampleTest">
                 <!-- @BeforeMethod -->
                 <!-- @Test -->
                 <!-- AfterMethod -->
@@ -29,7 +29,7 @@
     <!-- @BeforeTest -->
     <test name="Sample tests pack 2">
         <classes>
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterSuiteLetterRemoverSampleTests"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterSuiteLetterRemoverSampleTest"/>
         </classes>
     </test>
     <!-- @AfterTest -->
@@ -37,7 +37,7 @@
     <!-- @BeforeTest -->
     <test name="Sample tests pack 3">
         <classes>
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterTestLetterRemoverSampleTests"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterTestLetterRemoverSampleTest"/>
         </classes>
     </test>
     <!-- @BeforeTest -->

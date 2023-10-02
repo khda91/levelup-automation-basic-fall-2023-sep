@@ -1,13 +1,16 @@
 package ru.levelp.at.lesson0304.testng.hooks;
 
-import org.testng.annotations.*;
-import ru.levelp.at.lesson0304.LetterRemover;
-
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BeforeAfterClassLetterRemoverSampleTests {
+import java.util.List;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import ru.levelp.at.lesson0304.LetterRemover;
+
+public class BeforeAfterClassLetterRemoverSampleTest {
 
     private LetterRemover letterRemover;
     private List<String> testDataList;
@@ -36,8 +39,8 @@ public class BeforeAfterClassLetterRemoverSampleTests {
         // Assert (Then)
         var expectedList = List.of("ad", "on", "bag", "UN", "chool", "");
         assertThat(actualList)
-                .as(String.format("Letter '%s' was removed from the words", letter))
-                .isEqualTo(expectedList);
+            .as(String.format("Letter '%s' was removed from the words", letter))
+            .isEqualTo(expectedList);
     }
 
     @Test(description = "Letter in upper case will be removed from the words in the list in any case")
@@ -52,8 +55,8 @@ public class BeforeAfterClassLetterRemoverSampleTests {
         // Assert (Then)
         var expectedList = List.of("ad", "on", "bag", "UN", "chool", "");
         assertThat(actualList)
-                .as(String.format("Letter '%s' was removed from the words", letter))
-                .isEqualTo(expectedList);
+            .as(String.format("Letter '%s' was removed from the words", letter))
+            .isEqualTo(expectedList);
     }
 
     @AfterMethod

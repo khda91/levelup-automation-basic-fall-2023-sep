@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sample Positive Group Suite">
+
+    <groups>
+        <run>
+            <include name="positive"/>
+        </run>
+    </groups>
+
+    <test name="Sample positive tests pack">
+        <packages>
+            <package name="ru.levelp.at.lesson0304.testng.hooks.groups.*"/>
+        </packages>
+    </test>
+</suite>

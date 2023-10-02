@@ -1,12 +1,11 @@
 package ru.levelp.at.lesson0304.testng.hooks.inheritance;
 
-import org.testng.annotations.Test;
-
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LetterRemoverVanillaTests extends BaseTest {
+import java.util.List;
+import org.testng.annotations.Test;
+
+public class LetterRemoverTest extends BaseTest {
 
     @Test(description = "Letter in lower case will be removed from the words in the list in any case")
     public void testLetterInLowerCaseShouldBeRemovedFromList() {
@@ -15,7 +14,7 @@ public class LetterRemoverVanillaTests extends BaseTest {
         var letter = "s";
 
         // Act (When)
-        var actualList = letterRemover.removeVanilla(testDataList, letter);
+        var actualList = letterRemover.remove(testDataList, letter);
 
         // Assert (Then)
         var expectedList = List.of("ad", "on", "bag", "UN", "chool", "");
@@ -31,7 +30,7 @@ public class LetterRemoverVanillaTests extends BaseTest {
         var letter = "S";
 
         // Act (When)
-        var actualList = letterRemover.removeVanilla(testDataList, letter);
+        var actualList = letterRemover.remove(testDataList, letter);
 
         // Assert (Then)
         var expectedList = List.of("ad", "on", "bag", "UN", "chool", "");

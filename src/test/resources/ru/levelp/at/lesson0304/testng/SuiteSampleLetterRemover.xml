@@ -3,9 +3,9 @@
 
     <test name="Sample tests pack">
         <classes>
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterMethodLetterRemoverSampleTests"/>
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterClassLetterRemoverSampleTests"/>
-            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterSuiteLetterRemoverSampleTests"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterMethodLetterRemoverSampleTest"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterClassLetterRemoverSampleTest"/>
+            <class name="ru.levelp.at.lesson0304.testng.hooks.BeforeAfterSuiteLetterRemoverSampleTest"/>
         </classes>
     </test>
 </suite>
