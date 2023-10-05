@@ -18,6 +18,9 @@
         <checkstyle.version>10.3.3</checkstyle.version>
         <commons-io.version>2.13.0</commons-io.version>
         <jackson-databind.version>2.15.2</jackson-databind.version>
+        <selenium.version>4.13.0</selenium.version>
+        <assertj.version>3.24.2</assertj.version>
+        <junit-jupiter.version>5.10.0</junit-jupiter.version>
 
         <!-- plugins -->
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
@@ -39,7 +42,20 @@
 <!--            <groupId>com.squareup.retrofit2</groupId>-->
 <!--            <artifactId>converter-jackson</artifactId>-->
 <!--        </dependency>-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -50,7 +66,27 @@
                 <version>${commons-io.version}</version>
             </dependency>
 
-<!--            <dependency>-->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!--            <dependency>-->
 <!--                <groupId>io.github.openfeign</groupId>-->
 <!--                <artifactId>feign-jackson</artifactId>-->
 <!--                <version>11.8</version>-->
