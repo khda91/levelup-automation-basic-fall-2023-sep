@@ -21,6 +21,7 @@
         <selenium.version>4.13.0</selenium.version>
         <assertj.version>3.24.2</assertj.version>
         <junit-jupiter.version>5.10.0</junit-jupiter.version>
+        <javafaker.version>1.0.2</javafaker.version>
 
         <!-- plugins -->
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
@@ -55,6 +56,11 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
         </dependency>
     </dependencies>
 
@@ -103,6 +109,13 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-databind.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.javafaker</groupId>
+                <artifactId>javafaker</artifactId>
+                <version>${javafaker.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
