@@ -4,9 +4,9 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 
 import io.restassured.http.ContentType;
+import java.util.Map;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import java.util.Map;
 
 class RestAssuredSampleTest {
 

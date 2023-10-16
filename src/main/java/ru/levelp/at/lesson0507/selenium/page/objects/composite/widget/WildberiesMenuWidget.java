@@ -1,14 +1,12 @@
 package ru.levelp.at.lesson0507.selenium.page.objects.composite.widget;
 
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import ru.levelp.at.utils.SleepUtils;
-
-import java.util.List;
 
 public class WildberiesMenuWidget extends WildberiesAbstractWidget {
 
@@ -28,7 +26,7 @@ public class WildberiesMenuWidget extends WildberiesAbstractWidget {
     public void clickMenuButton() {
         // wait.until(ExpectedConditions.elementToBeClickable(menuButton)).click();
         new Actions(driver)
-            .moveToElement(menuButton,-23, 23)
+            .moveToElement(menuButton, -23, 23)
             .click(menuButton)
             .build()
             .perform();
