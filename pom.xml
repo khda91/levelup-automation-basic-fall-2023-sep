@@ -334,7 +334,7 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <includes>
-                        <include>**/lesson1011/allure/*Test.java</include>
+                        <include>**/lesson1011/cicd/*Test.java</include>
                     </includes>
                 </configuration>
                 <dependencies>
