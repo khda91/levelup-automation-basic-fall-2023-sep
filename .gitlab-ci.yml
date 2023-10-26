@@ -1,0 +1,32 @@
+stages:
+    - build
+    - test
+
+variables:
+    TEST_SUITE:
+        description: Название тестового сьют
+        value: cicd-allure-tests
+        expand: true
+        options:
+            - cicd-allure-tests
+            - cicd-allure-parametrized-tests
+            - cicd-allure-fail-tests
+            - cicd-allure-all-tests
+
+mr_code_build:
+    stage: build
+    image: maven:3-eclipse-temurin-11
+    script:
+        - mvn clean package -DskipTests
+
+run_tests:
+    stage: test
+    image: markhobson/maven-chrome:jdk-11
+    script:
+        - mvn clean test -P $TEST_SUITE
+    after_script:
+        - mvn allure:report
+    artifacts:
+        when: always
+        paths:
+            - target/site/**
