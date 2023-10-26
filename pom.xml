@@ -41,6 +41,45 @@
         <allure-maven.version>2.12.0</allure-maven.version>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>cicd-allure-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.class>**/lesson1011/cicd/AllureReportTest.java</suite.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>cicd-allure-parametrized-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.class>**/lesson1011/cicd/AllureReportParametrizedTest.java</suite.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>cicd-allure-fail-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.class>**/lesson1011/cicd/AllureReportFailTest.java</suite.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>cicd-allure-all-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.class>**/lesson1011/cicd/*Test.java</suite.class>
+            </properties>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>commons-io</groupId>
@@ -334,7 +373,7 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <includes>
-                        <include>**/lesson1011/allure/*Test.java</include>
+                        <include>${suite.class}</include>
                     </includes>
                 </configuration>
                 <dependencies>
