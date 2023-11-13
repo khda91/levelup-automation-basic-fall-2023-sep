@@ -12,7 +12,7 @@ public class WebDriverHook {
 
     @Before
     public void setUp() {
-        driver= new ChromeDriver();
+        driver = new ChromeDriver();
         TestContext.getInstance().add("driver", driver);
     }
 

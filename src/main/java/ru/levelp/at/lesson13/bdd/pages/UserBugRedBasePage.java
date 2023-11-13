@@ -1,11 +1,10 @@
 package ru.levelp.at.lesson13.bdd.pages;
 
 import io.qameta.allure.Step;
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public abstract class UserBugRedBasePage {
 
